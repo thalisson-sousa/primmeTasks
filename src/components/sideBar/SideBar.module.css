@@ -1,0 +1,40 @@
+.Container {
+    width: 15rem;
+    height: 100vh;
+    background-color: #111111;
+}
+
+.newTask {
+    background-color: #3c8dbc;
+    padding: 0.75em;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.menu {
+    padding: 0.75em;
+    color: white;
+    font-weight: 300;
+}
+
+.dashboard {
+    display: flex;
+    align-items: center;
+    background-color: #1e282c;
+    color: white;
+    padding: 0.75em;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.dashboard:hover {
+    border: 1px solid white;
+    margin-right: 2px;
+}
+
+.newTask:hover {
+    border: 1px solid white;
+    margin-right: 2px;
+}

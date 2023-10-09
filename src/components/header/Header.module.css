@@ -1,0 +1,36 @@
+.containerHeader {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    padding: 0 1em;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111111;
+}
+
+.containerInputs {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+}
+
+.containerInputs input {
+    border-radius: 6px;
+    padding: 6px;
+    border: none;
+}
+
+.containerInputs input:first-child {
+    width: 500px;
+}
+
+.containerInputs input:last-child {
+    background-color: brown;
+    color: white;
+}
+
+.containerHeader img {
+    width: 30px;
+    height: 30px;
+}
