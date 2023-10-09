@@ -28,6 +28,7 @@
 .containerInputs input:last-child {
     background-color: brown;
     color: white;
+    font-weight: 600;
 }
 
 .containerHeader img {
