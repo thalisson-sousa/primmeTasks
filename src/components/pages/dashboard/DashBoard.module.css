@@ -1,0 +1,29 @@
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 500;
+    color: white;
+}
+
+.Cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 4em 3em;
+
+    background-color: #58cce3;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+li {
+    list-style: none;
+}
