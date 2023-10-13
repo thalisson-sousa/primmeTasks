@@ -1,0 +1,12 @@
+.Container {
+    display: contents;
+    position: relative;
+}
+
+.body {
+    position: absolute;
+    left: 15rem;
+    top: 3.1rem;
+    width: 100%;
+    height: auto;
+}
