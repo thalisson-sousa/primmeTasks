@@ -1,0 +1,48 @@
+.Container {
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+    gap: 24px;
+    width: 60%;
+    padding: 2rem;
+    border-radius: 10px;
+
+    background-color: #3c8dbc;
+    color: white;
+}
+
+.inputForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nivel {
+    width: 3rem;
+}
+
+.dual {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.composer {
+    display: flex;
+    flex-direction: column;
+}
+
+.formSubmit {
+    background: #0066A2;
+    color: white;
+    border-style: outset;
+    border-color: #0066A2;
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    font: bold15px arial,sans-serif;
+    text-shadow: none;
+}
