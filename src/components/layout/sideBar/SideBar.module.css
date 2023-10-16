@@ -19,7 +19,7 @@
     font-weight: 300;
 }
 
-.dashboard {
+.sideButton {
     display: flex;
     align-items: center;
     background-color: #1e282c;
@@ -29,12 +29,17 @@
     cursor: pointer;
 }
 
-.dashboard:hover {
+.sideButton:hover, .newTask:hover {
     border: 1px solid white;
     margin-right: 2px;
 }
 
-.newTask:hover {
-    border: 1px solid white;
-    margin-right: 2px;
+.containerAcordeon p {
+display: flex;
+gap: 8px;
+}
+
+.containerAcordeon p:hover {
+    width: 100%;
+    border-bottom: 1px solid white;
 }

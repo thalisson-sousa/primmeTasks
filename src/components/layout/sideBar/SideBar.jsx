@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 
 import styles from './SideBar.module.css';
-import { AiOutlineDashboard } from 'react-icons/ai'
-import { CiFilter } from 'react-icons/ci'
+import { AiOutlineDashboard, AiOutlineUserAdd } from 'react-icons/ai';
+import { CiFilter } from 'react-icons/ci';
+import { LiaStoreAltSolid } from 'react-icons/lia';
+import { HiOutlineBuildingOffice } from 'react-icons/hi2';
 
 export default function SideBar() {
     return (
@@ -13,17 +15,40 @@ export default function SideBar() {
                 </Link>
             </div>
             <div className={styles.menu}>Menu de Navegação</div>
-            <div className={styles.dashboard}>
+            <div className={styles.sideButton}>
                 <AiOutlineDashboard />
                 <Link to="/">
                     Dashboard
                 </Link>
             </div>
-            <div className={styles.dashboard}>
+            <div className={styles.sideButton}>
                 <CiFilter />
                 <Link to="/report">
                     Relatorio
                 </Link>
+            </div>
+            <div className={styles.sideButton}>
+                <details className={styles.containerAcordeon}>
+                    <summary>Cadastro</summary>
+                    <p>
+                        <AiOutlineUserAdd />
+                        <Link to="/cadastro/usuario">
+                            Usuario
+                        </Link>
+                    </p>
+                    <p>
+                        <LiaStoreAltSolid />
+                        <Link to="/cadastro/filial">
+                            Filial
+                        </Link>
+                    </p>
+                    <p>
+                        <HiOutlineBuildingOffice />
+                        <Link to="/cadastro/empresa">
+                            Empresa
+                        </Link>
+                    </p>
+                </details>
             </div>
         </div>
     )
