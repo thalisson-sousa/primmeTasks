@@ -1,12 +1,17 @@
 import { useForm } from 'react-hook-form';
 
 import styles from './TaskForm.module.css';
+import axios from 'axios';
 
 export default function TaskForm() {
     const { register, handleSubmit, formState: {errors} } = useForm();
+    
+    function createTaks(data) {
+        axios.post(import.meta.env.VITE_BASE_URL + 'task', data)
+    }
 
     return (
-        <form className={styles.Container} onSubmit={handleSubmit((data) => console.log(data))}>
+        <form className={styles.Container} onSubmit={handleSubmit((data) => createTaks(data))}>
             <div className={styles.topContainer}>
                 <div className={`${styles.inputForm} ${styles.nivel}`}>
                     <label>Nivel:</label>
@@ -47,8 +52,8 @@ export default function TaskForm() {
 
             <div className={`${styles.inputForm} ${styles.dual}`}>
                 <div className={styles.composer}>
-                    <label>Atendimento:</label>
-                    <input {...register('atendimento')} />
+                    <label>Atendente:</label>
+                    <input {...register('atendente')} />
                 </div>
 
                 <div className={styles.composer}>
