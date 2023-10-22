@@ -5,6 +5,7 @@ import { AiOutlineDashboard, AiOutlineUserAdd } from 'react-icons/ai';
 import { CiFilter } from 'react-icons/ci';
 import { LiaStoreAltSolid } from 'react-icons/lia';
 import { HiOutlineBuildingOffice } from 'react-icons/hi2';
+import { BiTask } from 'react-icons/bi';
 
 export default function SideBar() {
     return (
@@ -19,6 +20,12 @@ export default function SideBar() {
                 <AiOutlineDashboard />
                 <Link to="/">
                     Dashboard
+                </Link>
+            </div>
+            <div className={styles.sideButton}>
+                <BiTask />
+                <Link to="/tasks">
+                    Chamados
                 </Link>
             </div>
             <div className={styles.sideButton}>

@@ -7,6 +7,7 @@ import DashBoard from "./components/pages/dashboard/DashBoard";
 import ReportPage from "./components/pages/report/ReportPage";
 import TaskForm from "./components/pages/taskform/TaskForm";
 import CadUsuario from "./components/pages/cadUsuario/CadUsuario";
+import GetTasks from "./components/pages/tasks/GetTasks";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<DashBoard />} />
             <Route path="/report" element={<ReportPage />} />
+            <Route path="/tasks" element={<GetTasks />} />
             <Route path="/newtask" element={<TaskForm />} />
             <Route path="/cadastro/usuario" element={<CadUsuario />} />
           </Routes>
