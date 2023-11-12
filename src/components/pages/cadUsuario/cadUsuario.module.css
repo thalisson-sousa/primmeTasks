@@ -1,4 +1,4 @@
-.Container {
+.Container dialog {
   background-color: #5ee2e7;
 }
 
@@ -8,7 +8,8 @@
 
 .head button {
   position: absolute;
-  left: 25rem;
+  left: 60rem;
+  top: -5rem;
 }
 
 .containerForm, .containerForm div {
@@ -74,21 +75,33 @@
   color: #05060fc2;
 }
 
+.inputForm input {
+  display: flex;
+  align-self: flex-end;
+  margin-left: 1em;
+}
+
 .erro {
   color: red;
+}
+
+.table {
+  margin-top: 25%;
+  width: fit-content;
+  height: fit-content;
 }
 
 @media (max-width: 1300px) {
   .head button {
     position: absolute;
-    left: 15rem;
+    left: 50rem;
   }
 }
 
 @media (max-width: 995px) {
   .head button {
     position: absolute;
-    left: 5rem;
+    left: 40rem;
   }
 }
 
@@ -102,13 +115,13 @@
 @media (min-width: 1920px) {
   .head button {
     position: absolute;
-    left: 40rem;
+    left: 60rem;
   }
 }
 
 @media (min-width: 3360px) {
   .head button {
     position: absolute;
-    left: 75rem;
+    left: 90rem;
   }
 }
