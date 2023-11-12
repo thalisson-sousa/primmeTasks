@@ -12,19 +12,17 @@ export default function GetTasks() {
         <table>
           <thead>
             <tr>
-              <th>id</th>
-              <th>nivel</th>
-              <th>status</th>
-              <th>protocolo</th>
-              <th>designacao</th>
-              <th>previsao</th>
-              <th>atendente</th>
-              <th>empresa</th>
-              <th>filial</th>
-              <th>sintomas</th>
-              <th>motivo</th>
-              <th>Criado em</th>
-              <th>Ultima Atualização</th>
+              <th>Nivel</th>
+              <th>Status</th>
+              <th>Protocolo</th>
+              <th>Designacao</th>
+              <th>Previsao</th>
+              <th>Atendente</th>
+              <th>Empresa</th>
+              <th>Filial</th>
+              <th>Sintomas</th>
+              <th>Motivo</th>
+              <th>Criação</th>
             </tr>
           </thead>
                   
@@ -33,7 +31,6 @@ export default function GetTasks() {
             !isLoading && <>
                 {data?.map(data => (
                     <tr key={data.id}>
-                        <td>{data.id}</td>
                         <td>{data.nivel}</td>
                         <td>{data.status}</td>
                         <td>{data.protocolo}</td>
@@ -45,7 +42,6 @@ export default function GetTasks() {
                         <td>{data.sintomas}</td>
                         <td>{data.motivo}</td>
                         <td>{data.createdAt}</td>
-                        <td>{data.updatedAt}</td>
                     </tr>
                 ))}
             </>
