@@ -2,12 +2,15 @@ import { useForm } from 'react-hook-form';
 
 import styles from './TaskForm.module.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export default function TaskForm() {
     const { register, handleSubmit, formState: {errors} } = useForm();
+    const navigate = useNavigate();
     
     function createTaks(data) {
         axios.post(import.meta.env.VITE_BASE_URL + 'task', data)
+        navigate('/tasks')
     }
 
     return (

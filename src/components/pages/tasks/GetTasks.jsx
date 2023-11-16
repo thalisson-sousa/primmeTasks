@@ -1,15 +1,15 @@
 import { useTasksData } from "../../../hooks/useTasksData";
 import LoadingSpinner from "../../spinnerComponent/LoadingSpinner";
 
-import styles from './GetTasks.module.css';
+import styles from './GetTask.module.css';
 
 export default function GetTasks() {
 
     const { data, isLoading } = useTasksData();
 
   return (
-    <section className={styles.Container}>
-        <table>
+    <section className={styles.tableWrapper}>
+        <table className={styles.flTable}>
           <thead>
             <tr>
               <th>Nivel</th>
@@ -23,6 +23,7 @@ export default function GetTasks() {
               <th>Sintomas</th>
               <th>Motivo</th>
               <th>Criação</th>
+              <th>Ação</th>
             </tr>
           </thead>
                   
@@ -42,6 +43,10 @@ export default function GetTasks() {
                         <td>{data.sintomas}</td>
                         <td>{data.motivo}</td>
                         <td>{data.createdAt}</td>
+                        <td>
+                          <button className={`${styles.editButton} ${styles.btn}`}>Editar</button>
+                          <button className={`${styles.deleteButton} ${styles.btn}`}>Deletar</button>
+                        </td>
                     </tr>
                 ))}
             </>
