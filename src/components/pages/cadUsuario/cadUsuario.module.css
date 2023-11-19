@@ -8,8 +8,8 @@
 
 .head button {
   position: absolute;
-  left: 60rem;
-  top: -5rem;
+  left: 75rem;
+  top: -10rem;
 }
 
 .containerForm, .containerForm div {
@@ -44,6 +44,34 @@
 .btn:active {
     box-shadow: 0px 0px var(--main-color);
     transform: translate(3px, 3px);
+}
+
+.btns {
+  border: none;
+  padding: 0.75em;
+  gap: 1em;    
+}
+
+.editButton {
+  background-color: rgb(52, 152, 219);
+}
+
+.editButton:hover {
+  background-color: rgb(36, 107, 154);
+}
+
+.deleteButton {
+  background-color:  rgb(192, 57, 43);
+}
+
+.deleteButton:hover {
+  background: rgb(153, 47, 35);
+}
+
+.password {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .inputForm input, .nivel select, .status select {
