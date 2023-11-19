@@ -9,8 +9,9 @@ export default function TaskForm() {
     const navigate = useNavigate();
     
     function createTaks(data) {
-        axios.post(import.meta.env.VITE_BASE_URL + 'task', data)
-        navigate('/tasks')
+        axios.post(import.meta.env.VITE_BASE_URL + 'task', data);
+        navigate('/tasks');
+        location.reload();
     }
 
     return (

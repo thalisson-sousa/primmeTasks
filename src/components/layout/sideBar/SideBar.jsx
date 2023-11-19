@@ -9,7 +9,7 @@ import { BiTask } from 'react-icons/bi';
 
 export default function SideBar() {
     return (
-        <div className={styles.Container}>
+        <aside className={styles.Container}>
             <div className={styles.newTask}>
                 <Link to="/newtask">
                     Novo Chamado
@@ -57,6 +57,6 @@ export default function SideBar() {
                     </p>
                 </details>
             </div>
-        </div>
+        </aside>
     )
 }

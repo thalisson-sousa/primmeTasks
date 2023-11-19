@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useTasksData } from "../../../hooks/useTasksData";
 import LoadingSpinner from "../../spinnerComponent/LoadingSpinner";
 
@@ -6,6 +7,11 @@ import styles from './GetTask.module.css';
 export default function GetTasks() {
 
     const { data, isLoading } = useTasksData();
+
+    function deleteButton(value) {
+      axios.delete(import.meta.env.VITE_BASE_URL + 'task/' + value)
+      location.reload();
+    }
 
   return (
     <section className={styles.tableWrapper}>
@@ -45,7 +51,7 @@ export default function GetTasks() {
                         <td>{data.createdAt}</td>
                         <td>
                           <button className={`${styles.editButton} ${styles.btn}`}>Editar</button>
-                          <button className={`${styles.deleteButton} ${styles.btn}`}>Deletar</button>
+                          <button onClick={e => deleteButton(e.target.value)} className={`${styles.deleteButton} ${styles.btn}`} value={data.id}>Deletar</button>
                         </td>
                     </tr>
                 ))}
