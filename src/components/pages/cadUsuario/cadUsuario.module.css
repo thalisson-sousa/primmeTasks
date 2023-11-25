@@ -143,13 +143,13 @@
 @media (min-width: 1920px) {
   .head button {
     position: absolute;
-    left: 60rem;
+    left: 90rem;
   }
 }
 
 @media (min-width: 3360px) {
   .head button {
     position: absolute;
-    left: 90rem;
+    left: 165rem;
   }
 }
