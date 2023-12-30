@@ -1,17 +1,17 @@
 .Container {
     position: relative;
     background-color: azure;
-
 }
 
 .body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
+    width: 100rem;
+    max-width: 1080px;
     margin: 2em 0;
 
     position: absolute;
-    left: 15rem;
+    left: 30rem;
     top: 3.1rem;
     }
