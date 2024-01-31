@@ -133,7 +133,7 @@ export default function CadUsuario() {
                 <tr key={data.id}>
                   <td>{data.isAdmin ? <ImCheckmark /> : <ImCross />}</td>
                   <td>{data.id}</td>
-                  <td>{data.username}</td>
+                  <td>{data.name}</td>
                   <td>{data.email}</td>
                   {see != true ? 
                         <td className={styles.password}>

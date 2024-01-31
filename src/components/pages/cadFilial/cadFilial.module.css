@@ -1,0 +1,155 @@
+.Container dialog {
+  background-color: #5ee2e7;
+}
+
+.head {
+  position: relative;
+}
+
+.head button {
+  position: absolute;
+  left: 75rem;
+  top: -10rem;
+}
+
+.containerForm, .containerForm div {
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 20px;
+  gap: 4px;
+}
+
+.btn {
+    --font-color: #323232;
+    --bg-color: #fff;
+    --main-color: #323232;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+  }
+
+.btn:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+}
+
+.btns {
+  border: none;
+  padding: 0.75em;
+  gap: 1em;    
+}
+
+.editButton {
+  background-color: rgb(52, 152, 219);
+}
+
+.editButton:hover {
+  background-color: rgb(36, 107, 154);
+}
+
+.deleteButton {
+  background-color:  rgb(192, 57, 43);
+}
+
+.deleteButton:hover {
+  background: rgb(153, 47, 35);
+}
+
+.password {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.inputForm input, .nivel select, .status select {
+  max-width: 190px;
+  height: 44px;
+  background-color: #E8F0FE;
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.inputForm label {
+  display: block;
+  margin-bottom: .3rem;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #05060f99;
+  transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.inputForm input:hover, .input:focus, .input-group:hover .input {
+  outline: none;
+  border-color: #05060f;
+}
+
+.inputForm input-group:hover .label, .input:focus {
+  color: #05060fc2;
+}
+
+.inputForm input {
+  display: flex;
+  align-self: flex-end;
+  margin-left: 1em;
+}
+
+.erro {
+  color: red;
+}
+
+.table {
+  margin-top: 25%;
+  width: fit-content;
+  height: fit-content;
+}
+
+@media (max-width: 1300px) {
+  .head button {
+    position: absolute;
+    left: 50rem;
+  }
+}
+
+@media (max-width: 995px) {
+  .head button {
+    position: absolute;
+    left: 40rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .head button {
+    position: absolute;
+    left: 1rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .head button {
+    position: absolute;
+    left: 90rem;
+  }
+}
+
+@media (min-width: 3360px) {
+  .head button {
+    position: absolute;
+    left: 165rem;
+  }
+}

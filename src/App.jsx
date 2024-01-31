@@ -7,6 +7,7 @@ import DashBoard from "./components/pages/dashboard/DashBoard";
 import ReportPage from "./components/pages/report/ReportPage";
 import TaskForm from "./components/pages/taskform/TaskForm";
 import CadUsuario from "./components/pages/cadUsuario/CadUsuario";
+import CadFilial from "./components/pages/cadFilial/cadFilial";
 import GetTasks from "./components/pages/tasks/GetTasks";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
             <Route path="/tasks" element={<GetTasks />} />
             <Route path="/newtask" element={<TaskForm />} />
             <Route path="/cadastro/usuario" element={<CadUsuario />} />
+            <Route path="/cadastro/filial" element={<CadFilial />} />
           </Routes>
         </div>
       </div>
