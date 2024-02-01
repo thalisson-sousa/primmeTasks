@@ -8,6 +8,7 @@ import ReportPage from "./components/pages/report/ReportPage";
 import TaskForm from "./components/pages/taskform/TaskForm";
 import CadUsuario from "./components/pages/cadUsuario/CadUsuario";
 import CadFilial from "./components/pages/cadFilial/cadFilial";
+import CadEmpresa from "./components/pages/cadEmpresa/cadEmpresa";
 import GetTasks from "./components/pages/tasks/GetTasks";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/newtask" element={<TaskForm />} />
             <Route path="/cadastro/usuario" element={<CadUsuario />} />
             <Route path="/cadastro/filial" element={<CadFilial />} />
+            <Route path="/cadastro/empresa" element={<CadEmpresa />} />
           </Routes>
         </div>
       </div>
