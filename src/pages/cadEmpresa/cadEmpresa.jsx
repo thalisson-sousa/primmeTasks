@@ -1,14 +1,14 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from "react";
 
-import styles from "./cadFilial.module.css";
+import styles from "./cadEmpresa.module.css";
 import style from "./CadTable.module.css";
 
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { useFililData } from "../../../hooks/useFilialData";
+import { useEmpresaData } from "../../hooks/useEmpresaData";
 
-export default function cadFilial() {
+export default function cadEmpresa() {
   const {
     register,
     handleSubmit,
@@ -19,10 +19,10 @@ export default function cadFilial() {
 
   const [open, setOpen] = useState(false);
 
-  const { data } = useFililData();
+  const { data } = useEmpresaData();
 
   async function createUser(data) {
-    await axios.post(import.meta.env.VITE_BASE_URL + "filial", data);
+    await axios.post(import.meta.env.VITE_BASE_URL + "empresa", data);
     location.reload();
   }
 
@@ -31,7 +31,7 @@ export default function cadFilial() {
   }
 
   function deleteButton(value) {
-    axios.delete(import.meta.env.VITE_BASE_URL + 'filial/' + value)
+    axios.delete(import.meta.env.VITE_BASE_URL + 'empresa/' + value)
     location.reload();
   }
 
@@ -54,27 +54,27 @@ export default function cadFilial() {
             >
               <div className={styles.inputForm}>
                 <label>
-                  SM:
+                  Nome:
                   <input
                     type="text"
-                    {...register("sm", { required: true })}
+                    {...register("nome", { required: true })}
                   />
                 </label>
-                {errors.sm && (
-                  <p className={styles.erro}>Informe o nome da filial</p>
+                {errors.nome && (
+                  <p className={styles.erro}>Informe o nome da Empresa</p>
                 )}
               </div>
 
               <div className={styles.inputForm}>
                 <label>
-                  Filial:
+                  Empresa:
                   <input
                     type="text"
-                    {...register("filial", { required: true })}
+                    {...register("contato", { required: true })}
                   />
                 </label>
-                {errors.filial && (
-                  <p className={styles.erro}>Informe numero da SM</p>
+                {errors.contato && (
+                  <p className={styles.erro}>Informe o contato da Empresa</p>
                 )}
               </div>
 
@@ -89,16 +89,16 @@ export default function cadFilial() {
           <table className={style.flTable}>
             <thead>
               <tr>
-                <th>SM</th>
-                <th>Filial</th>
+                <th>Nome</th>
+                <th>Contato</th>
                 <th>Ação</th>
               </tr>
             </thead>
             <tbody>
               {data?.map((data) => (
                 <tr key={data.id}>
-                  <td>{data.sm}</td>
-                  <td>{data.filial}</td>
+                  <td>{data.nome}</td>
+                  <td>{data.contato}</td>
                   <td style={{maxWidth: 50}}>
                     <button className={`${styles.editButton} ${styles.btns}`}>
                       Editar

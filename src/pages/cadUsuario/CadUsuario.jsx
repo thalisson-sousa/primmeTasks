@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import styles from "./cadUsuario.module.css";
 import style from "./CadTable.module.css";
 
-import { useUserData } from "../../../hooks/useUserData";
+import { useUserData } from "../../hooks/useUserData";
 import axios from "axios";
 
 export default function CadUsuario() {

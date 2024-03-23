@@ -1,4 +1,4 @@
-import { useTasksAcountAberto, useTasksAcountAndamento, useTasksAcountConcluido, useTasksAcountFechados } from '../../../hooks/useTaksAcount';
+import { useTasksAcountAberto, useTasksAcountAndamento, useTasksAcountConcluido, useTasksAcountFechados } from '../../hooks/useTaksAcount';
 import styles from './DashBoard.module.css';
 
 export default function DashBoard() {

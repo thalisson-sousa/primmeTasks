@@ -3,13 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styles from './App.module.css';
 import NavBar from "./components/layout/NavBar";
 
-import DashBoard from "./components/pages/dashboard/DashBoard";
-import ReportPage from "./components/pages/report/ReportPage";
-import TaskForm from "./components/pages/taskform/TaskForm";
-import CadUsuario from "./components/pages/cadUsuario/CadUsuario";
-import CadFilial from "./components/pages/cadFilial/cadFilial";
-import CadEmpresa from "./components/pages/cadEmpresa/cadEmpresa";
-import GetTasks from "./components/pages/tasks/GetTasks";
+import DashBoard from "./pages/dashboard/DashBoard";
+import ReportPage from "./pages/report/ReportPage";
+import TaskForm from "./pages/taskform/TaskForm";
+import CadUsuario from "./pages/cadUsuario/CadUsuario";
+import CadFilial from "./pages/cadFilial/cadFilial";
+import CadEmpresa from "./pages/cadEmpresa/cadEmpresa";
+import GetTasks from "./pages/tasks/GetTasks";
 
 function App() {
   return (

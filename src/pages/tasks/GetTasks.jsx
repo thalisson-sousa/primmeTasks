@@ -1,6 +1,6 @@
 import axios from "axios";
-import { useTasksData } from "../../../hooks/useTasksData";
-import LoadingSpinner from "../../spinnerComponent/LoadingSpinner";
+import { useTasksData } from "../../hooks/useTasksData";
+import LoadingSpinner from "../../components/spinnerComponent/LoadingSpinner";
 
 import styles from './GetTask.module.css';
 
