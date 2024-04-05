@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #15152a;
+
+    flex-grow: 1;
+    height: 100vh;
+    gap: 10px;
+}
+
+.form input, button {
+    width: 250px;
+    height: 40px;
+
+    border-radius: 5px;
+}
+
+.form input {
+    border: none;
+    background-color: #000000;
+}
+
+.form button {
+    background-color: #005eff;
+    color: white;
+    border: none;
+}
+
+
+.check {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    gap: 10px;
+    width: 92%;
+    color: white;
+    font-size: 12px;
+}
+
+button {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.account {
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.containerImg {
+    flex-grow: 2;
+    background-image: url("../../assets/loginPictures/loginScreen.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    background-position: center;
+    background-size: cover;
+}
+
