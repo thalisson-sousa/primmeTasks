@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #15152a;
+
+    flex-grow: 1;
+    height: 100vh;
+    gap: 10px;
+}
+
+.form input, button {
+    width: 250px;
+    height: 40px;
+
+    border-radius: 5px;
+}
+
+.form input {
+    border: none;
+    background-color: #000000;
+}
+
+.form button {
+    background-color: #005eff;
+    color: white;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.containerImg {
+    flex-grow: 2;
+    background-image: url("../../assets/loginPictures/cadScreen.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    background-position: center;
+    background-size: cover;
+}
+
