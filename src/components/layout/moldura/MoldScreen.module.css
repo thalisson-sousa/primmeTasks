@@ -1,0 +1,16 @@
+.ContainerMain {
+    position: relative;
+    background-color: azure;
+  }
+  
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 2em 0;
+  
+    position: absolute;
+    left: 15rem;
+    top: 3.1rem;
+  }

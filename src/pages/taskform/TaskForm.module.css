@@ -1,3 +1,15 @@
+.main {
+  display: flex;
+  width: 100%;
+}
+
+.ContainerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .Container {
     display: flex;
     justify-content: center;
@@ -7,6 +19,7 @@
     width: 60%;
     padding: 2rem;
     border-radius: 10px;
+    max-width: 900px;
 
     background-color: #3c8dbc;
     color: white;
@@ -17,6 +30,7 @@
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
+    max-width: 600px;
     gap: 4px;
 }
 

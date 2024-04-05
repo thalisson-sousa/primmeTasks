@@ -1,4 +1,16 @@
+import Header from "../../components/layout/header/Header";
+import SideBar from "../../components/layout/sideBar/SideBar";
 
 export default function ReportPage() {
-    return <h1>ReportPage</h1>
+  return (
+    <div>
+      <Header />
+      <div className="Container">
+        <div>
+          <SideBar />
+        </div>
+        <div>Report Page</div>
+      </div>
+    </div>
+  );
 }

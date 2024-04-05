@@ -2,6 +2,10 @@
   background-color: #5ee2e7;
 }
 
+.containerCadFilial {
+  display: flex;
+}
+
 .head {
   position: relative;
 }
@@ -9,7 +13,7 @@
 .head button {
   position: absolute;
   left: 75rem;
-  top: -10rem;
+  top: 2rem;
 }
 
 .containerForm, .containerForm div {

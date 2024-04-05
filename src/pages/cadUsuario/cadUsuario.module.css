@@ -1,3 +1,14 @@
+.main {
+  display: flex;
+}
+
+.containetSection {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+}
+
 .Container dialog {
   background-color: #5ee2e7;
 }
@@ -8,8 +19,8 @@
 
 .head button {
   position: absolute;
-  left: 75rem;
-  top: -10rem;
+  left: 81.5rem;
+  top: 1rem;
 }
 
 .containerForm, .containerForm div {

@@ -1,29 +1,35 @@
 .Container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
 
-    font-weight: 500;
-    color: white;
+  font-weight: 500;
+  color: white;
+}
+
+.containerCards {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .Cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    gap: 24px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .card {
-    padding: 4em 3em;
+  padding: 4em 3em;
 
-    background-color: #58cce3;
-    border: 1px solid black;
-    border-radius: 10px;
+  background-color: #58cce3;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }

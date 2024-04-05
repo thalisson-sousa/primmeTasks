@@ -3,6 +3,8 @@ import { useTasksData } from "../../hooks/useTasksData";
 import LoadingSpinner from "../../components/spinnerComponent/LoadingSpinner";
 
 import styles from './GetTask.module.css';
+import Header from "../../components/layout/header/Header";
+import SideBar from "../../components/layout/sideBar/SideBar";
 
 export default function GetTasks() {
 
@@ -14,7 +16,12 @@ export default function GetTasks() {
     }
 
   return (
-    <section className={styles.tableWrapper}>
+    <>
+    <Header />
+    <section className={styles.main}>
+      <SideBar />
+      <div className={styles.containerTables}>
+    <div className={styles.tableWrapper}>
         <table className={styles.flTable}>
           <thead>
             <tr>
@@ -60,6 +67,9 @@ export default function GetTasks() {
             {isLoading && <LoadingSpinner />}
           </tbody>
         </table>
+        </div>
+    </div>
     </section>
+    </>
   );
 }
