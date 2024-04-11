@@ -4,6 +4,7 @@
 
 .containerCadFilial {
   display: flex;
+  height: 100vh;
 }
 
 .head {

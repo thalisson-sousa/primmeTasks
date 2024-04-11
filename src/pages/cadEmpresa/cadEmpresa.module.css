@@ -1,5 +1,6 @@
 .containerMain {
   display: flex;
+  height: 100vh;
 }
 
 .containerSection {
