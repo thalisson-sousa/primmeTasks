@@ -1,5 +1,6 @@
 .Container {
   display: flex;
+  height: 100vh;
 
   font-weight: 500;
   color: white;
