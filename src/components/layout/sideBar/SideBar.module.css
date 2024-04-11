@@ -1,6 +1,6 @@
 .Container {
   width: 250px;
-  height: 100vh;
+  height: auto;
   background-color: #111111;
   box-sizing: border-box;
   overflow: hidden;

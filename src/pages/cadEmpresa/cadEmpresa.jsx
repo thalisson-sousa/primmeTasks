@@ -73,7 +73,7 @@ export default function cadEmpresa() {
 
                   <div className={styles.inputForm}>
                     <label>
-                      Empresa:
+                      Contato:
                       <input
                         type="text"
                         {...register("contato", { required: true })}

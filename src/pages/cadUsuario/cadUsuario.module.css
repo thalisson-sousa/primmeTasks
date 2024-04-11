@@ -2,6 +2,11 @@
   display: flex;
 }
 
+.Container {
+  width: auto;
+  height: 100vh;
+}
+
 .containetSection {
   display: flex;
   justify-content: center;
@@ -19,8 +24,8 @@
 
 .head button {
   position: absolute;
-  left: 81.5rem;
-  top: 1rem;
+  left: 65.5rem;
+  top: 0.2rem;
 }
 
 .containerForm, .containerForm div {
@@ -129,6 +134,19 @@
   width: fit-content;
   height: fit-content;
 }
+
+.pagination ul {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  color: #05060f;
+}
+
+.pagination a {
+  color: #05060f;
+  border-radius: 5px;
+}
+
 
 @media (max-width: 1300px) {
   .head button {

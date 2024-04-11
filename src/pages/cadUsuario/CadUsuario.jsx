@@ -1,16 +1,17 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import { ImCheckmark, ImCross } from "react-icons/im";
-import { RiEyeCloseLine, RiEyeLine } from "react-icons/ri";
 
 import { useForm } from "react-hook-form";
 
+import "./Pagination.css";
 import styles from "./cadUsuario.module.css";
 import style from "./CadTable.module.css";
 
-import { useUserData } from "../../hooks/useUserData";
 import axios from "axios";
 import Header from "../../components/layout/header/Header";
 import SideBar from "../../components/layout/sideBar/SideBar";
+import ReactPaginate from "react-paginate";
 
 export default function CadUsuario() {
   const {
@@ -22,10 +23,27 @@ export default function CadUsuario() {
   const modal = document.querySelector("#modal");
 
   const [open, setOpen] = useState(false);
+  const [size, setSize] = useState(5);
 
-  const [see, setSee] = useState(true);
+  const [topics, setTopics] = useState([]);
+  const [limit, setLimit] = useState(10);
+  const [page, setPage] = useState(0);
 
-  const { data } = useUserData();
+  useEffect(() => {
+    async function fetchTopics() {
+      const data = await fetch(
+        `http://localhost:8080/user?size=${size}&page=${page}`
+      );
+      const topicsResponse = await data.json();
+      setTopics(topicsResponse.content);
+      setLimit(topicsResponse.totalPages);
+    }
+    fetchTopics();
+  }, [page, size]);
+
+  const handlePage = (event) => {
+    setPage(event.selected);
+  };
 
   async function createUser(data) {
     await axios.post(import.meta.env.VITE_BASE_URL + "user", data);
@@ -36,28 +54,27 @@ export default function CadUsuario() {
     modal.showModal();
   }
 
-  function deleteButton(value) {
-    axios.delete(import.meta.env.VITE_BASE_URL + "user/" + value);
+  async function deleteButton(value) {
+    await axios.delete(import.meta.env.VITE_BASE_URL + "user/" + value);
     location.reload();
   }
 
-  function showButton() {
-    setSee(!see);
-  }
+  const changeSize = (selected) => {
+    console.log(selected);
+    setSize(selected);
+  };
 
   return (
     <>
-    <Header />
+      <Header />
       <main className={styles.main}>
         <SideBar />
         <section className={styles.containetSection}>
-          
-            <header className={styles.head}>
-              <button className={styles.btn} onClick={() => setOpen(true)}>
-                Cadastrar
-              </button>
-            </header>
-          
+          <header className={styles.head}>
+            <button className={styles.btn} onClick={() => setOpen(true)}>
+              Cadastrar
+            </button>
+          </header>
 
           <section className={styles.Container}>
             <div>
@@ -71,7 +88,7 @@ export default function CadUsuario() {
                       Nome:
                       <input
                         type="text"
-                        {...register("username", { required: true })}
+                        {...register("name", { required: true })}
                       />
                     </label>
                     {errors.nome && (
@@ -119,38 +136,40 @@ export default function CadUsuario() {
           </section>
 
           <section className={style.tableWrapper}>
+            <div className={style.qtd}>
+              <label htmlFor="qtd">Exibindo</label>
+              <select
+                name="Qtd"
+                id="qtd"
+                value={size}
+                onChange={(e) => changeSize(e.target.value)}
+              >
+                <option value="5">5 Usuários</option>
+                <option value="10">10 Usuários</option>
+                <option value="20">20 Usuários</option>
+                <option value="30">30 Usuários</option>
+              </select>
+            </div>
             <div>
               <table className={style.flTable}>
                 <thead>
                   <tr>
                     <th>Admin</th>
-                    <th>id</th>
-                    <th>username</th>
-                    <th>email</th>
-                    <th>password</th>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th>Email</th>
                     <th>Criado em</th>
                     <th>Ultima Atualização</th>
                     <th>Ação</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {data?.map((data) => (
+                  {topics?.map((data) => (
                     <tr key={data.id}>
                       <td>{data.isAdmin ? <ImCheckmark /> : <ImCross />}</td>
                       <td>{data.id}</td>
                       <td>{data.name}</td>
                       <td>{data.email}</td>
-                      {see != true ? (
-                        <td className={styles.password}>
-                          <p>{data.password}</p>
-                          <RiEyeLine />
-                        </td>
-                      ) : (
-                        <td className={styles.password}>
-                          <p>****</p>
-                          <RiEyeCloseLine />
-                        </td>
-                      )}
                       <td>{data.createdAt}</td>
                       <td>{data.updatedAt}</td>
                       <td>
@@ -166,18 +185,26 @@ export default function CadUsuario() {
                         >
                           Deletar
                         </button>
-                        <button
-                          onClick={() => showButton()}
-                          className={`${style.showButton} ${styles.btns}`}
-                          value={data.id}
-                        >
-                          Mostrar
-                        </button>
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+            </div>
+            <div>
+              <ReactPaginate
+                breakLabel="..."
+                nextLabel="next >"
+                previousLabel="< previous"
+                pageCount={limit}
+                onPageChange={handlePage}
+                containerClassName={"paginationBttns"}
+                previousLinkClassName={"previousBttn"}
+                nextLinkClassName={"nextBttn"}
+                disabledClassName={"paginationDisabled"}
+                activeClassName={"paginationActive"}
+                renderOnZeroPageCount={null}
+              />
             </div>
           </section>
         </section>
