@@ -4,7 +4,7 @@ import axios from "axios";
 const fetchData = async () => {
     const response = await axios.get(import.meta.env.VITE_BASE_URL + 'tasks');
     //console.log(response?.data.content);
-    return response?.data.content;
+    return response?.data;
 }
 
 export function useTasksData() {

@@ -1,13 +1,15 @@
 .main {
   display: flex;
+  min-height: 100vh;
+  height: auto;
 }
 
 .Container {
-  width: auto;
-  height: 100vh;
+  max-width: 600px;
+  height: 50%;
 }
 
-.containetSection {
+.containerSection {
   display: flex;
   justify-content: center;
   align-items: start;
@@ -134,6 +136,7 @@
   width: fit-content;
   height: fit-content;
 }
+
 
 .pagination ul {
   display: flex;

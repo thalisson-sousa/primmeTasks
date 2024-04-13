@@ -1,0 +1,59 @@
+.flTable {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.flTable td, .flTable th {
+    text-align: center;
+    padding: 8px;
+}
+
+.flTable td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.flTable thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.flTable thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.flTable tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+.btn {
+    border: none;
+    padding: 0.75em;
+    gap: 1em;    
+}
+
+.editButton {
+    background-color: rgb(52, 152, 219);
+}
+
+.editButton:hover {
+    background-color: rgb(36, 107, 154);
+}
+
+
+.deleteButton {
+    background-color:  rgb(192, 57, 43);
+}
+
+.deleteButton:hover {
+    background: rgb(153, 47, 35);
+}

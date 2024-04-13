@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 
 import styles from "./TaskForm.module.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import Header from "../../components/layout/header/Header";
 import SideBar from "../../components/layout/sideBar/SideBar";
 
@@ -12,12 +12,12 @@ export default function TaskForm() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   function createTaks(data) {
     axios.post(import.meta.env.VITE_BASE_URL + "tasks", data);
-    navigate("/tasks");
-    location.reload();
+    //navigate("/tasks");
+    //location.reload();
   }
 
   return (
